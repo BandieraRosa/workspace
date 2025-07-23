@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-toolbar">
+        <button class="btn" id="selectFolderBtn">选择文件夹</button>
+        <button class="btn btn-start" id="startInferenceBtn">开始推理</button>
+        <button class="btn btn-debug" id="debugBtn">Debug</button>
+        <input type="file" id="folderInput" webkitdirectory directory multiple accept="image/*">
+        <div style="margin-left: auto; color: #666; font-size: 12px;">
+            💡 提示：鼠标滚轮缩放图片 | 双击重置 | 拖拽移动（缩放时）
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="preview-header">图片列表</div>
+            <div class="preview-container" id="previewContainer"></div>
+        </div>
+
+        <div class="center-panel">
+            <div class="loading" id="loading"></div>
+            <div class="main-image-container" id="mainImageContainer">
+                <div class="no-image-placeholder">请选择一张图片预览</div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="debug-header">调试日志</div>
+            <div class="debug-content" id="debugContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
